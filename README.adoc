@@ -5,7 +5,7 @@
 ## Openshift Registry URL
 
 
-#### Open the route
+#### Open the route footnote:nca[need clusteradmin role]
   oc patch configs.imageregistry.operator.openshift.io/cluster --patch '{"spec":{"defaultRoute":true}}' --type=merge
 
 #### Retrieve the route
