@@ -1,0 +1,30 @@
+# ocp-tips
+
+
+
+## Openshift Registry URL
+
+
+#### Open the route
+  oc patch configs.imageregistry.operator.openshift.io/cluster --patch '{"spec":{"defaultRoute":true}}' --type=merge
+
+#### Retrieve the route
+  oc get route default-route -n openshift-image-registry --template='{{.spec.host }}'
+
+  REGISTRY_ROUTE=$(oc get route default-route -n openshift-image-registry --template='{{.spec.host }}')
+
+#### Login with docker/podman CLI
+
+  podman login -u $(oc whoami) -p $(oc whoami -t) --tls-verify=false ${REGISTRY_ROUTE}
+
+  docker login -u $(oc whoami) -p $(oc whoami -t) ${REGISTRY_ROUTE
+  
+#### Tag Image locally
+  
+  docker tag ${IMAGE_NAME}:latest ${IMAGE_NAME}:${IMAGE_VERSION}
+
+  docker tag ${IMAGE_NAME}:${IMAGE_VERSION} ${REGISTRY_ROUTE}/${NAMESPACE}/${IMAGE_NAME}:${IMAGE_VERSION}
+
+#### Push to Openshift Registry
+
+  docker push ${REGISTRY_ROUTE}/${NAMESPACE}/${IMAGE_NAME}:${IMAGE_VERSION}
