@@ -28,3 +28,11 @@
 #### Push to Openshift Registry
 
   docker push ${REGISTRY_ROUTE}/${NAMESPACE}/${IMAGE_NAME}:${IMAGE_VERSION}
+
+
+### ServiceAccount role
+
+
+#### Add admin Role to SA
+
+  oc adm policy add-role-to-user admin system:serviceaccount:${NAMESPACE}:default  -n ${NAMESPACE}
