@@ -36,3 +36,10 @@
 #### Add admin Role to SA
 
   oc adm policy add-role-to-user admin system:serviceaccount:${NAMESPACE}:default  -n ${NAMESPACE}
+  
+### Operator
+
+#### View Operator
+
+  oc get packagemanifests -n openshift-marketplace
+    
