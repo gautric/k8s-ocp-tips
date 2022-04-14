@@ -43,3 +43,14 @@
 
   oc get packagemanifests -n openshift-marketplace
     
+### Logs    
+    
+  oc logs -f ${Pod}
+
+### Build
+
+	oc start-build ${BuildConfig}  --follow
+	
+### Secret  
+  
+	oc get secret/${Secret} -o json | jq '.data["tls.crt"]' -r | base64 -d
