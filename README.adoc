@@ -54,3 +54,7 @@
 ### Secret  
   
 	oc get secret/${Secret} -o json | jq '.data["tls.crt"]' -r | base64 -d
+
+### Delete
+
+	oc delete all,configmap,pvc,serviceaccount,rolebinding,dc,bc --selector app=${MYAPP}
