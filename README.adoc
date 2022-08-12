@@ -58,3 +58,14 @@
 ### Delete
 
 	oc delete all,configmap,pvc,serviceaccount,rolebinding,dc,bc --selector app=${MYAPP}
+	
+	
+### Deployement
+
+#### Get the deployment name
+
+	kubectl get deployment
+
+#### Restart the deployment
+
+	kubectl rollout restart deployment <deployment_name>
