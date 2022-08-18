@@ -76,3 +76,16 @@
 
 	kubectl rollout restart deployment <deployment_name>
 	
+### Helm
+
+#### Create Helm Chart
+	
+	helm create <name>
+	
+#### Create Helm Chart
+	
+	helm install <helmInstallationName> . --namespace <ns> 
+	
+#### Delete Helm Chart
+	
+	helm delete <helmInstallationName> --namespace <ns> 	
