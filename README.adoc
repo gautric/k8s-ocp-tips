@@ -66,7 +66,7 @@
 	oc delete all,configmap,pvc,serviceaccount,rolebinding,dc,bc --selector app=${MYAPP}
 	
 	
-### Deployement
+### Deployment
 
 #### Get the deployment name
 
