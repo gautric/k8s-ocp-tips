@@ -36,7 +36,13 @@
 #### Add admin Role to SA
 
   oc adm policy add-role-to-user admin system:serviceaccount:${NAMESPACE}:default  -n ${NAMESPACE}
-  
+
+### OpenShift
+
+#### Check Openshift version
+
+  kubectl get clusterversion version -o yaml
+
 ### Operator
 
 #### View Operator
@@ -69,3 +75,4 @@
 #### Restart the deployment
 
 	kubectl rollout restart deployment <deployment_name>
+	
