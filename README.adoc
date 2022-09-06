@@ -52,7 +52,11 @@
 
 #### View Operator
 
-  oc get packagemanifests -n openshift-marketplace
+  kubectl get packagemanifests -n openshift-marketplace
+  
+#### Describe Operator
+
+  kubectl describe packagemanifests amq-streams  -n openshift-marketplace
     
 ### Logs    
     
