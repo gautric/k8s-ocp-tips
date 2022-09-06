@@ -42,6 +42,11 @@
 #### Check Openshift version
 
   kubectl get clusterversion version -o yaml
+  
+
+#### Retrieve YAML from OC client command 
+
+ 	<what ever oc command> --dry-run=client -o yaml
 
 ### Operator
 
@@ -90,8 +95,3 @@
 	
 	helm delete <helmInstallationName> --namespace <ns> 	
 
-
-### Retrieve YAML from OC client command 
-
-
- 	<what ever oc command> --dry-run=client -o yaml
