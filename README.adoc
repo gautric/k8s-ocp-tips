@@ -50,13 +50,13 @@
 
 ### Operator
 
-#### View Operator
+#### List all Operator available
 
   kubectl get packagemanifests -n openshift-marketplace
   
 #### Describe Operator
 
-  kubectl describe packagemanifests amq-streams  -n openshift-marketplace
+  kubectl describe packagemanifests ${OPT_NAME}  -n openshift-marketplace
     
 ### Logs    
     
