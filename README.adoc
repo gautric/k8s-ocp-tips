@@ -1,4 +1,4 @@
-# ocp-tips
+# Kubernetes & Openshift Tips (K8S OCP)
 
 
 
@@ -89,3 +89,9 @@
 #### Delete Helm Chart
 	
 	helm delete <helmInstallationName> --namespace <ns> 	
+
+
+### Retrieve YAML from OC client command 
+
+
+ 	<what ever oc command> --dry-run=client -o yaml
