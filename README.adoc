@@ -94,7 +94,11 @@
 #### Create Helm Chart
 	
 	helm install <helmInstallationName> . --namespace <ns> 
+
+#### Debug Helm Chart
 	
+	helm install <helmInstallationName> . --namespace <ns> --dry-run --debug
+
 #### Delete Helm Chart
 	
 	helm delete <helmInstallationName> --namespace <ns> 	
